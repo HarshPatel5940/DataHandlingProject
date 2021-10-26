@@ -1,0 +1,21 @@
+{
+    "users_db":{
+        "5940":"harsh,harshop",
+        "6171":"tanay,tanay",
+        "6969":"op,op",
+        "1234":"Suraj,sutaj11",
+        "4321":"nisanth,nishantho"
+    },
+
+    "admin_db":{
+        "5940":"sudo_harshop",
+        "1234":"sudo_surajop",
+        "4321":"sudo_nishanthop"
+    },
+
+    "file_path":{
+        "user_file_path":"data_user.csv",
+        "admin_file_path":"data_admin.csv",
+        "app_data_path": "data"
+    }
+}

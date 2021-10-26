@@ -3,10 +3,6 @@ from pandas import DataFrame as Df
 from os import listdir as ls
 from termcolor import colored, cprint  # @nishanth & @ suraj ** REQUIRE : pip install termcolor **
 
-user_file_path = "D:\Sindhi Model School (SMS)\HARSH\.PROGRAMS\School\project\data.csv"
-admin_file_path = "D:\Sindhi Model School (SMS)\HARSH\.PROGRAMS\School\project\data_admin.csv"
-app_data_path = "D:\Sindhi Model School (SMS)\HARSH\.PROGRAMS\School\project\data"
-
 
 def color(text):
     color_text = colored(text, 'cyan')
