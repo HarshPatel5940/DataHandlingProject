@@ -1,10 +1,10 @@
 from modules import *
 import os
 
-class Project():
+
+def Project():
     os.system("")
     print(color("xxxxxxxxxxxxxxxx DEVICE USAGE TRACKER xxxxxxxxxxxxxxxx\n\n"))
-
 
     while True:
         ask1 = input(app_menu())
@@ -33,7 +33,6 @@ class Project():
                     pass
         elif ask1 == "2":
             tup = admin_login()
-            id1 = tup[0]
             power = tup[1]
 
             if power == "3":
@@ -93,6 +92,3 @@ class Project():
         else:
             invalid_option()
             pass
-
-if __name__ == "__main__": # You Can run things from here and also from Main.py
-    Project()

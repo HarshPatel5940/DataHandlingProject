@@ -1,7 +1,11 @@
 import csv
-from pandas import DataFrame as Df
+from pandas import DataFrame as Df  # pip install pandas & numpy
 from os import listdir as ls
-from termcolor import colored, cprint  # @nishanth & @ suraj ** REQUIRE : pip install termcolor **
+from termcolor import colored, cprint  # pip install termcolor
+
+user_file_path = "data_user.csv"
+app_data_path = "data/"
+admin_file_path = "data_admin.csv"
 
 
 def color(text):
@@ -104,6 +108,7 @@ def user_count():
 
     users -= 1
     cprint(f" == > Number of Users Are {users}", "cyan")
+    f.close()
 
 
 def apps_count(id1):
@@ -111,19 +116,19 @@ def apps_count(id1):
     app_list = []
     app_list_final = []
     file_list = ls(app_data_path)
+
     for data in file_list:
         if f"User{id1}" in data:
             user_file.append(data)
     for data in user_file:
         Lst1 = data.split('-')
         app_list.append(Lst1[1])
-
     for app in app_list:
         name = app.split('.')
         app_list_final.append(name[0])
+
     if app_list_final == []:
         cprint("User is Invalid or User Has No Apps Tracked", "red")
-
     else:
         app_count = len(app_list_final)
         print(f"Total Apps Tracked For User{id1} = {app_count}\n The Apps Are ---> {app_list_final}")
@@ -135,60 +140,15 @@ def write_user(id11, name, password):
         file = csv.writer(f)
         user_row = [id11, name, password]
         file.writerow(user_row)
-
-
-def app_data_create(id1, app_name):
-    file_list = ls(app_data_path)
-
-    file_name = f"User{id1}-{app_name}.csv"
-
-    if file_name in file_list:
-        opt = input(file_exsist_warning())
-        if opt == 'y':
-            f = open(f"{app_data_path}/{file_name}", 'w', newline="")
-            fw = csv.writer(f)
-            column = ["Week Number", "Usage Duration(mins)", "Battery Consumptions(%)", "Data Consumption(in MB)",
-                      "Times Opened"]
-            fw.writerow(column)
-            cprint("File Successfully Created! ", "green")
-
-        else:
-            cprint("--File Was Not Created--", "red")
-
-    elif file_name not in file_list:
-        f = open(f"{app_data_path}/{file_name}", 'w', newline="")
-        fw = csv.writer(f)
-        column = ["Week Number", "Usage Duration(mins)", "Battery Consumptions(%)", "Data Consumption(in MB)",
-                  "Times Opened"]
-        fw.writerow(column)
-        cprint("File Successfully Created! ", "green")
-
-
-def app_data_inserter(id1, app_name):
-    file_name = f"User{id1}-{app_name}.csv"
-    f = open(f"{app_data_path}/{file_name}", 'a', newline="")
-    fw = csv.writer(f)
-    week_no = int(input("Enter The Week Number: "))
-
-    try:
-        usage_time = int(input(f"Enter the Usage Duration Of {app_name} for Week{week_no} (in minutes): "))
-        battery_consumption = int(input(f"Enter the Battery Consumed by {app_name} for Week{week_no}: "))
-        data_consumption = int(input(f"Enter the Data Consumed by {app_name} for Week{week_no} (in Megabytes): "))
-        times_opened = int(input(f"Enter How Many Times You Opened {app_name} in Week{week_no}: "))
-        row = [f"Week{week_no}", usage_time, battery_consumption, data_consumption, times_opened]
-        fw.writerow(row)
-    except ValueError:
-        cprint("there was a value error", 'red')
-
-    cprint(f"\n-----Data for Week{week_no} Has Been Successfully Added!-----\n\n", 'green')
+        f.close()
 
 
 def app_data_read(id1, app_name):
     file_name = f"User{id1}-{app_name}.csv"
     found = False
+    file_open = open(f"{app_data_path}/{file_name}", 'r')
+    file_reader = csv.reader(file_open)
     try:
-        file_open = open(f"{app_data_path}/{file_name}", 'r')
-        file_reader = csv.reader(file_open)
         opt = input(
             "Select The Task\n1) Read Full Data\n2) Read Particular Week\nYour Option [1]or[2] : ")
         if opt == "1":
@@ -205,8 +165,11 @@ def app_data_read(id1, app_name):
                 cprint("no such app found", 'red')
         else:
             invalid_option()
+        file_open.close()
+
     except FileNotFoundError:
         print("No Such App was Found")
+        file_open.close()
 
 
 def sign_up():
@@ -238,7 +201,7 @@ def sign_up():
             cprint("Password cannot be space!!", 'red')
 
         if "," in password:
-            details_ok=False
+            details_ok = False
             cprint("You Cannot Use Comma In Password as it will mess up the database", 'red')
 
         if len(password) < 8:
@@ -260,11 +223,11 @@ def sign_up():
 
 
 def login():
+    f = open(user_file_path, 'r')
+    fr = csv.reader(f)
     while True:
         id1 = input("Enter Your ID: ")
         password = input("Enter Your Password: ")
-        f = open(user_file_path, 'r')
-        fr = csv.reader(f)
         auth = False
         for row in fr:
             if id1 in row and password in row:
@@ -281,15 +244,16 @@ def login():
                 break
             else:
                 print("Invalid option! continuing login process....")
+    f.close()
     return id1
 
 
 def admin_login():
+    f = open(admin_file_path, 'r')
+    fr = csv.reader(f)
     while True:
-        f = open(admin_file_path, 'r')
         id1 = input("Enter Your ID: ")
         password = input("Enter Your Password: ")
-        fr = csv.reader(f)
         power = 1
         auth = False
 
@@ -302,12 +266,13 @@ def admin_login():
         if auth is True:
             break
         if auth is False:
-            cprint("You Credentials Are Wrong!" , 'red')
+            cprint("You Credentials Are Wrong!", 'red')
             chance = input("Do you want leave login page? [y] [n] : ")
             if chance == "y":
                 break
             else:
                 print("Continuing login process....")
+    f.close()
     return id1, power
 
 
@@ -407,15 +372,13 @@ Note:
 
     if auth is True and pass1 is True:
         before = []
-        with open(user_file_path, "r", newline="") as f:
-            file = csv.reader(f)
 
-            for row in file:
-                if row[0] == id1:
-                    row[2] = pwd
-                    before.append(row)
-                else:
-                    before.append(row)
+        for row in fr:
+            if row[0] == id1:
+                row[2] = pwd
+                before.append(row)
+            else:
+                before.append(row)
 
         with open(user_file_path, "w", newline="") as f:
             file = csv.writer(f)
@@ -426,3 +389,54 @@ Note:
         cprint("Did not enter proper old password!!", 'red')
     else:
         print("Password was not update due to above errors")
+    f.close()
+
+
+def app_data_create(id1, app_name):
+    file_list = ls(app_data_path)
+
+    file_name = f"User{id1}-{app_name}.csv"
+    f = open(f"{app_data_path}/{file_name}", 'w', newline="")
+    fw = csv.writer(f)
+
+    if file_name in file_list:
+        opt = input(file_exsist_warning())
+        if opt == 'y':
+            column = ["Week Number", "Usage Duration(mins)", "Battery Consumptions(%)", "Data Consumption(in MB)",
+                      "Times Opened"]
+            fw.writerow(column)
+            cprint("File Successfully Created! ", "green")
+
+        else:
+            cprint("--File Was Not Created--", "red")
+
+    elif file_name not in file_list:
+        column = ["Week Number", "Usage Duration(mins)", "Battery Consumptions(%)", "Data Consumption(in MB)",
+                  "Times Opened"]
+        fw.writerow(column)
+        cprint("File Successfully Created! ", "green")
+
+    f.close()
+
+
+def app_data_inserter(id1, app_name):
+    try:
+        file_name = f"User{id1}-{app_name}.csv"
+        f = open(f"{app_data_path}/{file_name}", 'a', newline="")
+        fw = csv.writer(f)
+        week_no = int(input("Enter The Week Number: "))
+
+        try:
+            usage_time = int(input(f"Enter the Usage Duration Of {app_name} for Week{week_no} (in minutes): "))
+            battery_consumption = int(input(f"Enter the Battery Consumed by {app_name} for Week{week_no}: "))
+            data_consumption = int(input(f"Enter the Data Consumed by {app_name} for Week{week_no} (in Megabytes): "))
+            times_opened = int(input(f"Enter How Many Times You Opened {app_name} in Week{week_no}: "))
+            row = [f"Week{week_no}", usage_time, battery_consumption, data_consumption, times_opened]
+            fw.writerow(row)
+        except ValueError:
+            cprint("there was a value error", 'red')
+
+        cprint(f"\n-----Data for Week{week_no} Has Been Successfully Added!-----\n\n", 'green')
+        f.close()
+    except FileNotFoundError:
+        cprint("File Not Found", 'red')
