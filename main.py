@@ -1,4 +1,6 @@
 from Loop import Project
+from modules import CheckRunner
+from os import system as cmd
 
 # INSTALL REQUIREMENTS:
 # 1. Python 3.6+
@@ -10,5 +12,8 @@ from Loop import Project
 # Check all the file paths in modules.py (line 6,7,8)
 
 
-if __name__ == "__main__":  # You Can run things from here and also from Loop.py
-    Project()
+if __name__ == "__main__":
+    if CheckRunner():
+        Project()
+    else:
+        cmd("start main.py")

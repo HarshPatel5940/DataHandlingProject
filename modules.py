@@ -1,6 +1,8 @@
 import csv
-from pandas import DataFrame as Df  # pip install pandas & numpy
+import sys
+from sys import executable
 from os import listdir as ls
+from pandas import DataFrame as Df  # pip install pandas & numpy
 from termcolor import colored, cprint  # pip install termcolor
 
 user_file_path = "data_user.csv"
@@ -83,6 +85,24 @@ WARNING!!
 
 Do you want to continue? [y] or [n] : """, "red")
     return x
+
+
+def CheckRunner():
+    a = sys.executable
+    m = "\\"
+    m = m[0]
+
+    while True:
+        b = len(a)
+        c = a[(b-1)]
+        if c == m:
+            break
+        a = a[:(b-1)]
+
+    if sys.executable == a+"pythonw.exe":
+        return False
+    else:
+        return True
 
 
 def show_all_users():
@@ -196,7 +216,7 @@ def sign_up():
             details_ok = False
             cprint("Password cannot be empty!!", 'red')
 
-        if password == " ":
+        if " " in password:
             details_ok = False
             cprint("Password cannot be space!!", 'red')
 
