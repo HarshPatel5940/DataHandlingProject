@@ -6,7 +6,7 @@ from Loop import Project
 # 3. pandas
 
 # Possible Problems:
-# Check all the file paths in modules.py
+# Check all the file paths in modules.py (line 6,7,8)
 
 if __name__ == "__main__":  # You Can run things from here and also from Loop.py
     Project()
