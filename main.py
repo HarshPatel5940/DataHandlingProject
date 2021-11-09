@@ -17,4 +17,3 @@ if __name__ == "__main__":
         cmd("start main.py")
     else:
         Project()
-F
