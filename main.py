@@ -1,5 +1,5 @@
+import sys
 from Loop import Project
-from modules import CheckRunner
 from os import system as cmd
 
 # INSTALL REQUIREMENTS:
@@ -13,7 +13,8 @@ from os import system as cmd
 
 
 if __name__ == "__main__":
-    if CheckRunner():
-        Project()
-    else:
+    if "pythonw.exe" in f"{sys.executable}":
         cmd("start main.py")
+    else:
+        Project()
+F

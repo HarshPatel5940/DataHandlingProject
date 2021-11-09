@@ -1,6 +1,5 @@
 import csv
 import sys
-from sys import executable
 from os import listdir as ls
 from pandas import DataFrame as Df  # pip install pandas & numpy
 from termcolor import colored, cprint  # pip install termcolor
@@ -85,25 +84,6 @@ WARNING!!
 
 Do you want to continue? [y] or [n] : """, "red")
     return x
-
-
-def CheckRunner():
-    a = sys.executable
-    m = "\\"
-    m = m[0]
-
-    while True:
-        b = len(a)
-        c = a[(b-1)]
-        if c == m:
-            break
-        a = a[:(b-1)]
-
-    if sys.executable == a+"pythonw.exe":
-        return False
-    else:
-        return True
-
 
 def show_all_users():
     file1 = open(user_file_path, 'r')
