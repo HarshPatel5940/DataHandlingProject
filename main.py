@@ -8,8 +8,10 @@ from os import system as cmd
 # 3. pandas
 
 # Possible Problems:
-# Don't Run it in IDLE, it will not work as Intended.
+# To run in Linux use (python3 main.py) or the Below Command
+# gnome-terminal --command="bash -c 'python3 main.py'"
 # Check all the file paths in config.py
+
 
 if __name__ == "__main__":
     if "pythonw.exe" in f"{sys.executable}":
