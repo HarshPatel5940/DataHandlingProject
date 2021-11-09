@@ -9,8 +9,7 @@ from os import system as cmd
 
 # Possible Problems:
 # Don't Run it in IDLE, it will not work as Intended.
-# Check all the file paths in modules.py (line 6,7,8)
-
+# Check all the file paths in config.py
 
 if __name__ == "__main__":
     if "pythonw.exe" in f"{sys.executable}":

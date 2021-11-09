@@ -14,7 +14,7 @@ NameError: name 'true' is not defined
 2021-11-09 16:08:48,837 : modules : WARNING : 5940 Added New Admin with ID 4567
 2021-11-09 16:09:40,896 : modules : INFO : User 5940 Logged out.
 2021-11-09 16:12:12,179 : modules : INFO : Project has Been Started (Loop.py line 8)
-2021-11-09 16:12:52,342 : modules : INFO : User  Logged out.
+2021-11-09 16:12:52,342 : modules : INFO : User Logged out.
 2021-11-09 16:13:06,692 : modules : INFO : Project has Been Started (Loop.py line 8)
 2021-11-09 16:13:33,717 : modules : INFO : Loop closed due to Keyboard Interrupt
 2021-11-09 16:33:28,935 : config : ERROR : No module named 'termcolor'
@@ -24,3 +24,4 @@ Traceback (most recent call last):
 ModuleNotFoundError: No module named 'termcolor'
 
 ========================= ABOVE PART IS AN EXAMPLE OF LOGGING FOR GITHUB =========================
+

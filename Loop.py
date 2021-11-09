@@ -96,6 +96,7 @@ def Project():
                 invalid_option()
                 pass
     except Exception as e:
+        print(e)
         logger.exception(e)
     except KeyboardInterrupt:
         logger.warning("Loop closed due to Keyboard interrupt Error")
