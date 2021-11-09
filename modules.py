@@ -1,12 +1,13 @@
 import csv
-import sys
 from os import listdir as ls
-from pandas import DataFrame as Df  # pip install pandas & numpy
-from termcolor import colored, cprint  # pip install termcolor
-
-user_file_path = "data_user.csv"
-app_data_path = "data/"
-admin_file_path = "data_admin.csv"
+from config import app_data_path, user_file_path, admin_file_path, logger
+try:
+    from pandas import DataFrame as Df  # pip install pandas & numpy
+    from termcolor import colored, cprint
+except Exception as e:
+    logger.exception(e)
+    print("Environment Requirement Not satisfied. (install pandas and termcolor properly)")
+    print("check audit.log if needed")
 
 
 def color(text):
@@ -67,8 +68,9 @@ def invalid_option():
     cprint("Invalid option", "red")
 
 
-def log_out():
+def log_out(id1):
     cprint("Logging Out...", "cyan")
+    logger.info(f"User {id1} Logged out.")
 
 
 def closing():
@@ -84,6 +86,7 @@ WARNING!!
 
 Do you want to continue? [y] or [n] : """, "red")
     return x
+
 
 def show_all_users():
     file1 = open(user_file_path, 'r')
@@ -107,7 +110,7 @@ def user_count():
         users += 1
 
     users -= 1
-    cprint(f" == > Number of Users Are {users}", "cyan")
+    cprint(f" =Number of Users Are {users}", "cyan")
     f.close()
 
 
@@ -236,6 +239,7 @@ def login():
                 auth = True
                 break
         if auth is True:
+            logger.info(f"User {id1} has logged in")
             break
         if auth is False:
             cprint("You Credentials Are Wrong!\nTRY AGAIN", 'red')
@@ -264,6 +268,7 @@ def admin_login():
                 auth = True
                 break
         if auth is True:
+            logger.info(f"Super User {id1} has logged in")
             break
         if auth is False:
             cprint("You Credentials Are Wrong!", 'red')
@@ -276,7 +281,7 @@ def admin_login():
     return id1, power
 
 
-def add_admin():
+def add_admin(id2):
     id1 = int(input("Enter Admin ID : "))
     pwd = input("Enter Admin Password : ")
     power = "2"  # by default 2
@@ -286,10 +291,11 @@ def add_admin():
     file = csv.writer(f)
     file.writerow(lst)
     f.close()
-    print(f"New Admin User With ID{id1} Has Been Added! ")
+    logger.warning(f"{id2} Added New Admin with ID {id1}")
+    print(f"New Super User (Admin) has been added, ID: {id1}")
 
 
-def remove_admin():
+def remove_admin(id2):
     id1 = input("Enter The ID Of The Admin You Want To Remove : ")
     before = []
 
@@ -303,11 +309,11 @@ def remove_admin():
     with open(admin_file_path, "w", newline="") as f:
         file = csv.writer(f)
         file.writerows(before)
+    logger.warning(f"{id2} Removed Admin with ID {id1}")
+    print(f"Super User (Admin) has been Removed, ID: {id1}")
 
-    print(f"Admin User With ID{id1} Has Been Removed! ")
 
-
-def admin_password_update():
+def admin_password_update(id2):
     id1 = input("Enter id of the user u wanna update password : ")
     pwd = input("Enter the new password for the user : ")
     before = []
@@ -385,6 +391,7 @@ Note:
             file.writerows(before)
 
         cprint("User Password Updated Successfully", 'green')
+        logger.warning(f"User {id1} Has Changed password.")
     elif not auth:
         cprint("Did not enter proper old password!!", 'red')
     else:
@@ -406,6 +413,7 @@ def app_data_create(id1, app_name):
                       "Times Opened"]
             fw.writerow(column)
             cprint("File Successfully Created! ", "green")
+            logger.info(f"User {id1} Overwrite App tracking for {app_name}")
 
         else:
             cprint("--File Was Not Created--", "red")
@@ -415,8 +423,8 @@ def app_data_create(id1, app_name):
                   "Times Opened"]
         fw.writerow(column)
         cprint("File Successfully Created! ", "green")
-
     f.close()
+    logger.info(f"User {id1} Created App tracking for {app_name}")
 
 
 def app_data_inserter(id1, app_name):
@@ -438,5 +446,6 @@ def app_data_inserter(id1, app_name):
 
         cprint(f"\n-----Data for Week{week_no} Has Been Successfully Added!-----\n\n", 'green')
         f.close()
+        logger.info(f"User {id1} Added Data for {app_name} with Week-No {week_no}")
     except FileNotFoundError:
         cprint("File Not Found", 'red')
