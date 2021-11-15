@@ -1,6 +1,7 @@
 import sys
-from Loop import Project
 from os import system as cmd
+
+from Loop import Project
 
 # INSTALL REQUIREMENTS:
 # 1. Python 3.6+
