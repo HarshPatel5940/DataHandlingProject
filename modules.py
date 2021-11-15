@@ -91,29 +91,21 @@ Do you want to continue? [y] or [n] : """, "red")
 
 
 def show_all_users():
-    file1 = open(user_file_path, 'r')
-    reader = csv.reader(file1)
-    print(Df(reader, ))
-    file1.close()
+    with open(user_file_path, 'r') as f:
+        reader = csv.reader(f)
+        print(Df(reader, ))
 
 
 def show_all_admins():
-    file1 = open(admin_file_path, 'r')
-    reader = csv.reader(file1)
-    print(Df(reader, ))
-    file1.close()
+    with open(admin_file_path, 'r') as f:
+        reader = csv.reader(f)
+        print(Df(reader, ))
 
 
 def user_count():
-    f = open(user_file_path, "r")
-    fr = csv.reader(f)
-    users = 0
-    for row in fr:
-        users += 1
-
-    users -= 1
-    cprint(f" =Number of Users Are {users}", "cyan")
-    f.close()
+    with open(user_file_path, "r") as f:
+        fr = csv.reader(f)
+        print(f"Total Users = {len(list(fr))-1}")
 
 
 def apps_count(id1):
@@ -125,14 +117,16 @@ def apps_count(id1):
     for data in file_list:
         if f"User{id1}" in data:
             user_file.append(data)
+
     for data in user_file:
-        Lst1 = data.split('-')
-        app_list.append(Lst1[1])
+        lst1 = data.split('-')
+        app_list.append(lst1[1])
+
     for app in app_list:
         name = app.split('.')
         app_list_final.append(name[0])
 
-    if app_list_final == []:
+    if not app_list_final:
         cprint("User is Invalid or User Has No Apps Tracked", "red")
     else:
         app_count = len(app_list_final)
@@ -145,36 +139,34 @@ def write_user(id11, name, password):
         file = csv.writer(f)
         user_row = [id11, name, password]
         file.writerow(user_row)
-        f.close()
 
 
 def app_data_read(id1, app_name):
     file_name = f"User{id1}-{app_name}.csv"
     found = False
-    file_open = open(f"{app_data_path}/{file_name}", 'r')
-    file_reader = csv.reader(file_open)
+
     try:
-        opt = input(
-            "Select The Task\n1) Read Full Data\n2) Read Particular Week\nYour Option [1]or[2] : ")
-        if opt == "1":
-            print(Df(file_reader, ))
-        elif opt == "2":
-            week_number = input("Enter the Week for which you want to view the data  : ")
-            header = ["Week Number", "Usage Duration(mins)", "Battery Consumptions(%)", "Data Consumption(in MB)",
-                      "Times Opened"]
-            for row in file_reader:
-                if f"Week{week_number}" == row[0]:
-                    print(Df(row, header))
-                    found = True
-            if found is False:
-                cprint("no such app found", 'red')
-        else:
-            invalid_option()
-        file_open.close()
+        with open(f"{app_data_path}/{file_name}", 'r') as file_open:
+            file_reader = csv.reader(file_open)
+            opt = input(
+                "Select The Task\n1) Read Full Data\n2) Read Particular Week\nYour Option [1]or[2] : ")
+            if opt == "1":
+                print(Df(file_reader, ))
+            elif opt == "2":
+                week_number = input("Enter the Week for which you want to view the data  : ")
+                header = ["Week Number", "Usage Duration(mins)", "Battery Consumptions(%)", "Data Consumption(in MB)",
+                          "Times Opened"]
+                for row in file_reader:
+                    if f"Week{week_number}" == row[0]:
+                        print(Df(row, header))
+                        found = True
+                if found is False:
+                    cprint("no such app found", 'red')
+            else:
+                invalid_option()
 
     except FileNotFoundError:
         print("No Such App was Found")
-        file_open.close()
 
 
 def sign_up():
@@ -185,17 +177,16 @@ def sign_up():
         name = input("Enter your name : ")
         password = input("Enter your Password : ")
 
-        file1 = open(user_file_path, 'r')
-        reader = csv.reader(file1)
+        with open(user_file_path, 'r') as file1:
+            reader = csv.reader(file1)
 
-        for row in reader:
-            if row[0] == id1:
-                cprint(f"ERROR IN (same id) ==> {row}", 'red')
-                details_ok = False
-            if row[1] == name:
-                cprint(f"ERROR IN (same Name) ==> {row}", 'red')
-                details_ok = False
-        file1.close()
+            for row in reader:
+                if row[0] == id1:
+                    cprint(f"ERROR (same id Provided) ==> {row}", 'red')
+                    details_ok = False
+                if row[1] == name:
+                    cprint(f"ERROR (same Name Provided) ==> {row}", 'red')
+                    details_ok = False
 
         if password == "":
             details_ok = False
@@ -228,59 +219,55 @@ def sign_up():
 
 
 def login():
-    f = open(user_file_path, 'r')
-    fr = csv.reader(f)
-    while True:
-        id1 = input("Enter Your ID: ")
-        password = input("Enter Your Password: ")
-        auth = False
-        for row in fr:
-            if id1 in row and password in row:
-                name = colored(f"=> {row[1]}", 'cyan')
-                print(f"You are Authorized with has {name}!")
-                auth = True
-                break
-        if auth is True:
-            logger.info(f"User {id1} has logged in")
-            break
-        if auth is False:
-            cprint("You Credentials Are Wrong!\nTRY AGAIN", 'red')
-            chance = input("Do you want leave login page? [y] [n] : ")
-            if chance == "y":
-                break
-            else:
-                print("Invalid option! continuing login process....")
-    f.close()
-    return id1
+    with open(user_file_path, 'r') as f:
+        fr = csv.reader(f)
+        while True:
+            id1 = input("Enter Your ID: ")
+            password = input("Enter Your Password: ")
+            auth = False
+            for row in fr:
+                if id1 in row and password in row:
+                    name = colored(f"=> {row[1]}", 'cyan')
+                    print(f"You are Authorized with has {name}!")
+                    auth = True
+                    break
+            if auth is True:
+                logger.info(f"User {id1} has logged in")
+                return id1
+            if auth is False:
+                cprint("You Credentials Are Wrong!\nTRY AGAIN", 'red')
+                chance = input("Do you want leave login page? [y] [n] : ")
+                if chance == "y":
+                    break
+                else:
+                    print("Invalid option! continuing login process....")
 
 
 def admin_login():
-    f = open(admin_file_path, 'r')
-    fr = csv.reader(f)
-    while True:
-        id1 = input("Enter Your ID: ")
-        password = input("Enter Your Password: ")
-        power = 1
-        auth = False
+    with open(admin_file_path, 'r') as f:
+        fr = csv.reader(f)
+        while True:
+            id1 = input("Enter Your ID: ")
+            password = input("Enter Your Password: ")
+            power = 1
+            auth = False
 
-        for row in fr:
-            if id1 in row and password in row:
-                power = row[2]
-                print(f"You are Authorized as Level {power} Admin User!")
-                auth = True
-                break
-        if auth is True:
-            logger.info(f"Super User {id1} has logged in")
-            break
-        if auth is False:
-            cprint("You Credentials Are Wrong!", 'red')
-            chance = input("Do you want leave login page? [y] [n] : ")
-            if chance == "y":
-                break
-            else:
-                print("Continuing login process....")
-    f.close()
-    return id1, power
+            for row in fr:
+                if id1 in row and password in row:
+                    power = row[2]
+                    print(f"You are Authorized as Level {power} Admin User!")
+                    auth = True
+                    break
+            if auth is True:
+                logger.info(f"Super User {id1} has logged in")
+                return id1, power
+            if auth is False:
+                cprint("You Credentials Are Wrong!", 'red')
+                chance = input("Do you want leave login page? [y] [n] : ")
+                if chance == "y":
+                    break
+                else:
+                    print("Continuing login process....")
 
 
 def add_admin(id2):
@@ -289,10 +276,9 @@ def add_admin(id2):
     power = "2"  # by default 2
     lst = [id1, pwd, power]
 
-    f = open(admin_file_path, "a", newline="")
-    file = csv.writer(f)
-    file.writerow(lst)
-    f.close()
+    with open(admin_file_path, "a", newline="") as f:
+        file = csv.writer(f)
+        file.writerow(lst)
     logger.warning(f"{id2} Added New Admin with ID {id1}")
     print(f"New Super User (Admin) has been added, ID: {id1}")
 
@@ -311,6 +297,7 @@ def remove_admin(id2):
     with open(admin_file_path, "w", newline="") as f:
         file = csv.writer(f)
         file.writerows(before)
+
     logger.warning(f"{id2} Removed Admin with ID {id1}")
     print(f"Super User (Admin) has been Removed, ID: {id1}")
 
@@ -351,12 +338,12 @@ Note:
     pwd = input("Enter the new password : ")
     confirm = input("Confirm the new password : ")
 
-    f = open(user_file_path, 'r')
-    fr = csv.reader(f)
+    with open(user_file_path, 'r') as f:
+        fr = csv.reader(f)
 
-    for row in fr:
-        if id1 in row and old_password in row:
-            auth = True
+        for row in fr:
+            if id1 in row and old_password in row:
+                auth = True
 
     if confirm != pwd:
         cprint("Password did not match", 'red')
@@ -405,49 +392,49 @@ def app_data_create(id1, app_name):
     file_list = ls(app_data_path)
 
     file_name = f"User{id1}-{app_name}.csv"
-    f = open(f"{app_data_path}/{file_name}", 'w', newline="")
-    fw = csv.writer(f)
+    with open(f"{app_data_path}/{file_name}", 'w', newline="") as f:
+        fw = csv.writer(f)
 
-    if file_name in file_list:
-        opt = input(file_exsist_warning())
-        if opt == 'y':
+        if file_name in file_list:
+            opt = input(file_exsist_warning())
+            if opt == 'y':
+                column = ["Week Number", "Usage Duration(mins)", "Battery Consumptions(%)", "Data Consumption(in MB)",
+                          "Times Opened"]
+                fw.writerow(column)
+                cprint("File Successfully Created! ", "green")
+                logger.info(f"User {id1} Overwrite App tracking for {app_name}")
+
+            else:
+                cprint("--File Was Not Created--", "red")
+
+        elif file_name not in file_list:
             column = ["Week Number", "Usage Duration(mins)", "Battery Consumptions(%)", "Data Consumption(in MB)",
                       "Times Opened"]
             fw.writerow(column)
             cprint("File Successfully Created! ", "green")
-            logger.info(f"User {id1} Overwrite App tracking for {app_name}")
-
-        else:
-            cprint("--File Was Not Created--", "red")
-
-    elif file_name not in file_list:
-        column = ["Week Number", "Usage Duration(mins)", "Battery Consumptions(%)", "Data Consumption(in MB)",
-                  "Times Opened"]
-        fw.writerow(column)
-        cprint("File Successfully Created! ", "green")
-    f.close()
     logger.info(f"User {id1} Created App tracking for {app_name}")
 
 
 def app_data_inserter(id1, app_name):
     try:
         file_name = f"User{id1}-{app_name}.csv"
-        f = open(f"{app_data_path}/{file_name}", 'a', newline="")
-        fw = csv.writer(f)
-        week_no = int(input("Enter The Week Number: "))
+        with open(f"{app_data_path}/{file_name}", 'a', newline="") as f:
+            fw = csv.writer(f)
+            week_no = int(input("Enter The Week Number: "))
 
-        try:
-            usage_time = int(input(f"Enter the Usage Duration Of {app_name} for Week{week_no} (in minutes): "))
-            battery_consumption = int(input(f"Enter the Battery Consumed by {app_name} for Week{week_no}: "))
-            data_consumption = int(input(f"Enter the Data Consumed by {app_name} for Week{week_no} (in Megabytes): "))
-            times_opened = int(input(f"Enter How Many Times You Opened {app_name} in Week{week_no}: "))
-            row = [f"Week{week_no}", usage_time, battery_consumption, data_consumption, times_opened]
-            fw.writerow(row)
-        except ValueError:
-            cprint("there was a value error", 'red')
+            try:
+                usage_time = int(input(f"Enter the Usage Duration Of {app_name} for Week{week_no} (in minutes): "))
+                battery_consumption = int(input(f"Enter the Battery Consumed by {app_name} for Week{week_no}: "))
+                data_consumption = int(input(f"Enter the Data Consumed by {app_name} for Week{week_no} (in Megabytes): "))
+                times_opened = int(input(f"Enter How Many Times You Opened {app_name} in Week{week_no}: "))
+                row = [f"Week{week_no}", usage_time, battery_consumption, data_consumption, times_opened]
+                fw.writerow(row)
+            except ValueError:
+                cprint("there was a value error", 'red')
 
-        cprint(f"\n-----Data for Week{week_no} Has Been Successfully Added!-----\n\n", 'green')
-        f.close()
-        logger.info(f"User {id1} Added Data for {app_name} with Week-No {week_no}")
+            cprint(f"\n-----Data for Week{week_no} Has Been Successfully Added!-----\n\n", 'green')
+
+            logger.info(f"User {id1} Added Data for {app_name} with Week-No {week_no}")
+
     except FileNotFoundError:
         cprint("File Not Found", 'red')
