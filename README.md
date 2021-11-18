@@ -1,8 +1,6 @@
 <h1 align="center"> DataHandlingProject </h1>
 
-
-<h3 align="center"> Check out my School Data Handling Project!! (CSV Based) </h3>
-
+<h3 align="center"> Check out my School Data Handling Project!! (CSV Based).</h3>
 
 ## Initial Steps: 
   1. termcolor `pip install termcolor`
@@ -10,7 +8,6 @@
   3. Now Check the file paths in [config.py](https://github.com/HarshPatel5940/DataHandlingProject/blob/master/config.py)
   
 After completing these you can just run the project by running [main.py](https://github.com/HarshPatel5940/DataHandlingProject/blob/master/main.py)
-
 
 ### Project Explanation:
 
@@ -22,4 +19,4 @@ After completing these you can just run the project by running [main.py](https:/
 
 - [main.py](https://github.com/HarshPatel5940/DataHandlingProject/blob/master/main.py) The Project is made to run in this file with a simple IDLE check.
 
-Any more questions? Let me know _____
+### Need to contact or share something? Feel Free to open a [Discussion](https://github.com/HarshPatel5940/DataHandlingProject/discussions) under suitable topic
