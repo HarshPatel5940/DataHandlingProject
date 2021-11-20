@@ -9,8 +9,7 @@ from Loop import Project
 # 3. pandas
 
 # Possible Problems:
-# To run in Linux use (python3 main.py) or the Below Command
-# gnome-terminal --command="bash -c 'python3 main.py'"
+# To run in Linux use (python3 main.py)
 # Check all the file paths in config.py
 
 
