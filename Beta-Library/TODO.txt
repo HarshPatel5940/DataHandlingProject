@@ -1,4 +1,0 @@
-1) Make Library for This Project for modules.py 
-2) (not imp) Make Individual Loops for This Project for Loop.py 
-3) Implement the Lib for the Project
-4) test it and fix all bugs
