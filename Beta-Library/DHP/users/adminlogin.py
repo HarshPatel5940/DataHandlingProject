@@ -15,7 +15,7 @@ def admin_login():
             auth = False
 
             for row in fr:
-                if id1 in row and password in row:
+                if id1 == row[0] and password == row[1]:
                     power = row[2]
                     print(f"You are Authorized as Level {power} Admin User!")
                     auth = True
@@ -27,6 +27,6 @@ def admin_login():
                 cprint("You Credentials Are Wrong!", "red")
                 chance = input("Do you want leave login page? [y] [n] : ")
                 if chance == "y":
-                    break
+                    return None
                 else:
                     print("Continuing login process....")

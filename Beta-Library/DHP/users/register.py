@@ -3,6 +3,7 @@ import csv
 from DHP.context import cprint
 from DHP.paths import user_file_path
 from DHP.Utils.logger import logger
+from DHP.Utils.create import write_user
 
 
 def sign_up():

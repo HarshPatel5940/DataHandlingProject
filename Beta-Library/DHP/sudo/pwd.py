@@ -8,18 +8,21 @@ from DHP.Utils.logger import logger
 def password_update_by_user(id1):
     auth = False
     pass1 = True
-    cprint("""
+    cprint(
+        """
 Note:
     Password cannot be empty
     Password can't start with a space
     Password cannot contain commas
-    Password should be minimum 8 characters""", 'red')
+    Password should be minimum 8 characters""",
+        "red",
+    )
 
     old_password = input("Enter the old password : ")
     pwd = input("Enter the new password : ")
     confirm = input("Confirm the new password : ")
 
-    with open(user_file_path, 'r') as f:
+    with open(user_file_path, "r") as f:
         fr = csv.reader(f)
 
         for row in fr:
@@ -27,47 +30,54 @@ Note:
                 auth = True
 
     if not auth:
-        cprint("Did not enter proper old password!!", 'red')
+        cprint("Did not enter proper old password!!", "red")
     elif auth:
         if confirm != pwd:
-            cprint("Password did not match", 'red')
+            cprint("Password did not match", "red")
             pass1 = False
 
         if pwd == "":
             pass1 = False
-            cprint("Password cannot be empty!!", 'red')
+            cprint("Password cannot be empty!!", "red")
 
-        if pwd.startswith(" "):
+        if " " in pwd:
             pass1 = False
-            cprint("Password cannot be start with space!!", 'red')
+            cprint("Password cannot contain space!!", "red")
 
         if "," in pwd:
             pass1 = False
-            cprint("You Cannot Use Comma In Password as it will mess up the database", 'red')
+            cprint(
+                "You Cannot Use Comma In Password as it will mess up the database",
+                "red",
+            )
 
         if len(pwd) < 8:
-            cprint("Password should be minimum 8 characters", 'red')
+            cprint("Password should be minimum 8 characters", "red")
             pass1 = False
 
         if auth is True and pass1 is True:
             before = []
 
-            for row in fr:
-                if row[0] == id1:
-                    row[2] = pwd
-                    before.append(row)
-                else:
-                    before.append(row)
+            with open(user_file_path, "r") as f:
+                fr = csv.reader(f)
+
+                for row in fr:
+                    if row[0] == id1:
+                        row[2] = pwd
+                        before.append(row)
+                    else:
+                        before.append(row)
 
             with open(user_file_path, "w", newline="") as f:
                 file = csv.writer(f)
                 file.writerows(before)
 
-            cprint("User Password Updated Successfully", 'green')
-            logger.warning(f"User {id1} Has Changed password. [from: {old_password} to: {pwd}]")
+            cprint("User Password Updated Successfully", "green")
+            logger.warning(
+                f"User {id1} Has Changed password. [from: {old_password} to: {pwd}]"
+            )
         else:
             print("Password was not update due to above errors")
-        f.close()
     else:
         logger.info("Something went wrong!!!")
 
@@ -91,5 +101,5 @@ def password_update_by_admin(id2):
         file = csv.writer(f)
         file.writerows(before)
 
-    cprint("User Password Updated Successfully", 'green')
+    cprint("User Password Updated Successfully", "green")
     logger.warning(f"{id2} Has Changed password of {id1} to {pwd}")

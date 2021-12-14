@@ -1,9 +1,9 @@
 import csv
-
+from DHP.Utils.logger import logger
 from DHP.context import cprint
 from DHP.paths import app_data_path
 try: 
-    from panda import DataFrame as Df
+    from pandas import DataFrame as Df
 except Exception as e:
     logger.exception(e)
     print("Pandas module not found. Please install it.")

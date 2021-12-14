@@ -12,6 +12,9 @@ def color(text):
     color_text = colored(text, "cyan")
     return color_text
 
+def start_project():
+    logger.info("Project has Been Started")
+    print(color("xxxxxxxxxxxxxxxx DEVICE USAGE TRACKER xxxxxxxxxxxxxxxx\n\n"))
 
 def app_menu():
     x = f"""

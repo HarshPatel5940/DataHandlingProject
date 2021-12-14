@@ -13,7 +13,7 @@ def login():
             password = input("Enter Your Password: ")
             auth = False
             for row in fr:
-                if id1 in row and password in row:
+                if id1==row[0] and password == row[2]:
                     name = colored(f"=> {row[1]}", "cyan")
                     print(f"You are Authorized with has {name}!")
                     auth = True
@@ -25,6 +25,6 @@ def login():
                 cprint("You Credentials Are Wrong!\nTRY AGAIN", "red")
                 chance = input("Do you want leave login page? [y] [n] : ")
                 if chance == "y":
-                    break
+                    return None
                 else:
                     print("Invalid option! continuing login process....")
