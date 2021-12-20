@@ -9,7 +9,7 @@
   
 After completing these you can just run the project by running [main.py](https://github.com/HarshPatel5940/DataHandlingProject/blob/master/main.py)
 
-### Project Explanation:
+### Project Explanation: (Needs an Update)
 
  - [config.py](https://github.com/HarshPatel5940/DataHandlingProject/blob/master/config.py) contains the essential file paths for the project to run properly and has a logger setup (Audit.log). This logger is made to **revisit any potential errors** in the project in future. The Logger tracks All the important potential information. *`According to me`*
 
