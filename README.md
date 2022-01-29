@@ -1,6 +1,6 @@
 <h1 align="center"> DataHandlingProject </h1>
 
-<h3 align="center"> Check out my School Data Handling Project!! (CSV Based).</h3>
+<h3 align="center"> Check out my School Data Handling Project!! (CSV, MySql Based).</h3>
 
 ## Requirements: 
   1. termcolor `pip install termcolor`
