@@ -4,8 +4,9 @@
 
 ## Requirements: 
   1. python 3.6+
-  2. termcolor `pip install termcolor`
-  3. pandas `pip install pandas`
+  2. mysql 
+  3. termcolor `pip install termcolor`
+  4. pandas `pip install pandas`
    
 
 ## Project Explanation: (PENDING... Create PR if you want to help)

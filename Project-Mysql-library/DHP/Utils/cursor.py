@@ -14,7 +14,7 @@ connection = connector.connect(
 
 
 if connection.is_connected():
-    logger.info("MySql Connection Done!")
-    print(color("Connection Done!!"))
+    logger.debug("Connected To DataBase | sys")
+    print(color("Connected To DataBase"))
 
     cursor = connection.cursor()

@@ -1,6 +1,8 @@
 print("Toally Testing Things....")
 # ? Sheeesh
 
-from mysqlscript.DataBaseinit import Setup_User_DataBase
+from DHP.users.register import sign_up
+from DBScript import SetupUser
 
-User
+SetupUser()
+sign_up()

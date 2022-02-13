@@ -1,32 +1,31 @@
-import csv
-
-from DHP.context import cprint
-from DHP.paths import admin_file_path
+from DHP.Utils.cursor import cursor
+from DHP.context import warn
 from DHP.Utils.logger import logger
 
 
 def admin_login():
-    with open(admin_file_path, "r") as f:
-        fr = csv.reader(f)
-        while True:
-            id1 = input("Enter Your ID: ")
-            password = input("Enter Your Password: ")
-            power = 1
-            auth = False
+    id1 = input("Enter Your ID: ")
+    password = input("Enter Your Password: ")
+    auth = False
 
-            for row in fr:
-                if id1 == row[0] and password == row[1]:
-                    power = row[2]
-                    print(f"You are Authorized as Level {power} Admin User!")
-                    auth = True
-                    break
-            if auth is True:
-                logger.info(f"Super User {id1} has logged in")
-                return id1, power
-            if auth is False:
-                cprint("You Credentials Are Wrong!", "red")
-                chance = input("Do you want leave login page? [y] [n] : ")
-                if chance == "y":
-                    return None
-                else:
-                    print("Continuing login process....")
+    QUERY = """SELECT user_power FROM UserData WHERE user_id=%s AND user_password=%s"""
+    VAL = (id1, password)
+
+    cursor.execute(QUERY, VAL)
+
+    power = cursor.fetchall()
+    print(f"--> {power}")
+
+    if len(cursor.fetchall()) == 1:
+        auth = True
+
+    if auth is True:
+        logger.info(f"Super User {id1} has Logged In! Power: {power}")
+        return id1, power
+    if auth is False:
+        warn("You Credentials Are Wrong!\nTRY AGAIN")
+        chance = input("Do you want leave login page? [y] [n] : ")
+        if chance == "y":
+            return None
+        else:
+            print("Invalid option! continuing login process....")

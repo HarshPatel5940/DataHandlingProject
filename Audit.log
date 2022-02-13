@@ -1,0 +1,47 @@
+2022-02-13 15:57:37,091 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 16:02:53,831 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 16:03:35,513 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 16:08:35,201 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 16:08:35,224 : DHP.Utils.logger : ERROR : TABLE FOUND EMPTY | ADDING DEFAULT VALUES | BUT HOW THE HELL THIS HAPPEN???
+2022-02-13 16:08:35,368 : DHP.Utils.logger : WARNING : TABLE NOT FOUND | Created New Table UserData
+2022-02-13 16:08:36,379 : DHP.Utils.logger : INFO : INITIALIZATION OF DATABASE COMPLETE
+2022-02-13 16:11:45,083 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 16:11:45,087 : DHP.Utils.logger : INFO : INITIALIZATION OF DATABASE COMPLETE
+2022-02-13 16:13:37,769 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 16:13:37,793 : DHP.Utils.logger : INFO : INITIALIZATION OF DATABASE COMPLETE
+2022-02-13 16:14:12,851 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 16:14:12,855 : DHP.Utils.logger : INFO : INITIALIZATION OF DATABASE COMPLETE
+2022-02-13 16:18:19,026 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 16:18:19,038 : DHP.Utils.logger : INFO : INITIALIZATION OF DATABASE COMPLETE
+2022-02-13 16:19:41,804 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 16:19:41,813 : DHP.Utils.logger : INFO : INITIALIZATION OF DATABASE COMPLETE
+2022-02-13 16:22:34,015 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 16:22:34,019 : DHP.Utils.logger : INFO : INITIALIZATION OF DATABASE COMPLETE
+2022-02-13 16:22:44,502 : DHP.Utils.logger : INFO : User 5940 has Logged In!
+
+------
+2022-02-13 16:32:56,567 : DHP.Utils.logger : INFO : Connected To DataBase | sys
+2022-02-13 16:32:56,573 : DHP.Utils.logger : INFO : INITIALIZATION OF DATABASE COMPLETE
+2022-02-13 16:32:56,573 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-13 16:33:05,841 : DHP.Utils.logger : INFO : User 5940 has Logged In!
+
+------
+2022-02-13 16:36:56,769 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-13 16:37:06,457 : DHP.Utils.logger : INFO : User 5940 has Logged In!
+
+------
+2022-02-13 16:37:46,858 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-13 16:37:46,864 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-13 16:37:46,864 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-13 16:37:55,848 : DHP.Utils.logger : INFO : User 5940 has Logged In!
+2022-02-13 18:07:38,372 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-13 18:08:22,471 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-13 18:08:22,484 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-13 18:08:22,485 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-13 18:11:57,736 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-13 18:11:57,743 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-13 18:11:57,743 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-13 18:13:00,093 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-13 18:13:00,097 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-13 18:13:00,097 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-13 18:13:03,286 : DHP.Utils.logger : DEBUG : []
