@@ -109,3 +109,41 @@ UnboundLocalError: local variable 'id1' referenced before assignment
 2021-12-14 18:58:12,837 : DHP.Utils.logger : INFO : Project has Been Started
 2021-12-14 18:59:43,736 : DHP.Utils.logger : INFO : Project has Been Started
 2022-02-13 09:42:52,361 : DHP.Utils.logger : INFO : Project has Been Started
+2022-02-13 10:39:33,357 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 10:40:20,830 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 10:48:44,972 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 10:49:02,629 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 10:50:42,461 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 10:56:40,799 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 11:30:16,251 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 11:32:04,075 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 11:32:04,088 : DHP.Utils.logger : WARNING : DataBase Not Found | Created New Database SchoolMysqlProject
+2022-02-13 11:40:40,571 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 11:40:40,599 : DHP.Utils.logger : WARNING : DataBase Not Found | Created New Database SchoolMysqlProject
+2022-02-13 11:41:41,371 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 11:41:41,400 : DHP.Utils.logger : WARNING : DataBase Not Found | Created New Database SchoolMysqlProject
+2022-02-13 12:07:14,490 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 12:08:57,870 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 12:10:35,650 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 12:12:23,085 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 12:12:23,158 : DHP.Utils.logger : WARNING : TABLE NOT FOUND | Created New Table UserData
+2022-02-13 12:15:44,375 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 12:15:44,399 : DHP.Utils.logger : WARNING : DataBase Not Found | Created New Database SchoolMysqlProject
+2022-02-13 12:19:48,642 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 12:19:48,750 : DHP.Utils.logger : WARNING : TABLE NOT FOUND | Created New Table UserData
+2022-02-13 12:35:01,547 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 12:35:01,667 : DHP.Utils.logger : WARNING : DataBase Not Found | Created New Database SchoolMysqlProject
+2022-02-13 12:35:07,754 : DHP.Utils.logger : WARNING : TABLE NOT FOUND | Created New Table UserData
+2022-02-13 12:36:08,627 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 12:37:09,171 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 12:37:28,187 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 12:38:22,719 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 12:40:00,757 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 12:40:19,049 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 12:40:25,229 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 15:07:31,491 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 15:09:33,668 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 15:09:33,683 : DHP.Utils.logger : WARNING : DataBase Not Found | Created New Database SchoolMysqlProject
+2022-02-13 15:09:39,751 : DHP.Utils.logger : WARNING : TABLE NOT FOUND | Created New Table UserData
+2022-02-13 15:12:05,653 : DHP.Utils.logger : INFO : MySql Connection Done!
+2022-02-13 15:15:30,478 : DHP.Utils.logger : INFO : MySql Connection Done!

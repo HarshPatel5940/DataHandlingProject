@@ -12,6 +12,10 @@ def color(text):
     color_text = colored(text, "cyan")
     return color_text
 
+def warn(text):
+    color_text = colored(text, "red")
+    print(color_text)
+
 def start_project():
     logger.info("Project has Been Started")
     print(color("xxxxxxxxxxxxxxxx DEVICE USAGE TRACKER xxxxxxxxxxxxxxxx\n\n"))
