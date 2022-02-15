@@ -37,6 +37,6 @@ def LibProject():
 
     except Exception as e:
         print(e)
-        logger.exception(e)
+        logger.exception("Main Loop Error\n", e)
     except KeyboardInterrupt:
-        logger.warning("Loop closed due to Keyboard interrupt Error")
+        logger.warning("Main Loop closed due to Keyboard interrupt Error")

@@ -1,57 +1,83 @@
 from DHP.Utils.cursor import cursor
-from DHP.context import warn
+from DHP.context import warn, color
 from DHP.Utils.logger import logger
 
 
 def sign_up():
-    while True:
-        details_ok = True
-        pwd = True
-        id1 = input("Enter your id : ")
-        # name = input("Enter your name : ")
-        # password = input("Enter your Password : ")
+    try:
+        while True:
+            details_ok = True
+            pwd = True
+            empty = []
 
-        QUERY1 = "SELECT * from UserData WHERE user_id='{id1}'"
+            id1 = input("PLEASE ENTER A 4 DIGIT ID!!! (No Less No More)")
 
-        cursor.execute(QUERY1)
+            if len(id1) != 4:
+                warn("PLEASE ENTER A 4 DIGIT ID!!! (No Less No More)")
+                pass
 
-        fetch1 = cursor.fetchall()
-        print(fetch1)
-        logger.debug(fetch1)
+            Q1_userid = "SELECT user_id from UserData WHERE user_id=%s"
+            cursor.execute(Q1_userid, (id1,))
+            F1_userid = cursor.fetchall()
 
-        return
+            details_ok = False if F1_userid != empty else True
+            if details_ok == False:
+                warn(
+                    f"ID: {id1} is Already Being in Already Being Used | Please try a New ID"
+                )
+                pass
 
-        if password == "":
-            details_ok = False
-            cprint("Password cannot be empty!!", "red")
-
-        if " " in password:
-            details_ok = False
-            cprint("Password cannot be space!!", "red")
-
-        if "," in password:
-            details_ok = False
-            cprint(
-                "You Cannot Use Comma In Password as it will mess up the database",
-                "red",
+            name = input("Enter your name : ")
+            warn(
+                """
+Note:
+    Password cannot be empty
+    Password can't start with a space
+    Password cannot contain commas
+    Password should be minimum 8 characters
+    
+    """
             )
+            password = input("Enter your Password : ")
 
-        if len(password) < 8:
-            pwd = False
+            if password == "":
+                details_ok = False
+                warn("Password cannot be empty!!")
 
-        if details_ok is True:
-            write_user(id1, name, password)
-            cprint("New User Has Been Created Successfully !!", "cyan")
-            if pwd is False:
-                cprint(
-                    "We Recommend you Updating password to minimum 8 characters!!!",
+            if " " in password:
+                details_ok = False
+                warn("Password cannot contain space!!")
+
+            if "," in password:
+                details_ok = False
+                warn(
+                    "You Cannot Use Comma In Password",
                     "red",
                 )
-            break
-        if details_ok is False:
-            cprint("\nInvalid details provided! \n", "red")
-            chance = input("Do you want leave sign-up page? [y] [n] : ")
-            if chance == "y":
+
+            if len(password) < 8:
+                pwd = False
+
+            if details_ok is True:
+                q2_insert = "INSERT INTO UserData VALUES(%s, %s, %s, 1)"
+                q2_value = (id1, name, password)
+                print(color("New User Has Been Created Successfully !!"))
+
+                if pwd is False:
+                    warn(
+                        "\nWe Recommend you Updating password to minimum 8 characters!!!\n\n"
+                    )
                 break
-            else:
-                print("Invalid option! Continuing Sign-up process....")
+
+            if details_ok is False:
+                warn("\nInvalid details were provided! \n")
+                chance = input("Do you want leave sign-up page? [y] [n] : ")
+                if chance == "y":
+                    break
+                else:
+                    print("Continuing Sign-up process....")
+    except Exception as e:
+        logger.exception("signup loop error \n", e)
+        logger.exception(e)
+    except KeyboardInterrupt:
+        logger.warning("Signup - Loop closed due to Keyboard interrupt Error")
