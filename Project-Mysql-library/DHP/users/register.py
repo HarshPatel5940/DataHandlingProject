@@ -1,4 +1,4 @@
-from DHP.Utils.cursor import cursor
+from DHP.Utils.cursor import cursor, connection
 from DHP.context import warn, color
 from DHP.Utils.logger import logger
 
@@ -61,6 +61,8 @@ Note:
             if details_ok is True:
                 q2_insert = "INSERT INTO UserData VALUES(%s, %s, %s, 1)"
                 q2_value = (id1, name, password)
+                cursor.execute(q2_insert, q2_value)
+                connection.commit()
                 print(color("New User Has Been Created Successfully !!"))
 
                 if pwd is False:

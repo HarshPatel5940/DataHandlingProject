@@ -97,3 +97,7 @@ NameError: name 'color' is not defined
 2022-02-15 22:26:25,903 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
 2022-02-15 22:26:25,905 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
 2022-02-15 22:26:25,905 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-19 16:12:12,999 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-19 16:12:13,153 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-19 16:12:13,153 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-19 16:13:22,424 : DHP.Utils.logger : INFO : User 1111 has Logged In!
