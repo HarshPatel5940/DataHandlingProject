@@ -66,38 +66,29 @@ Traceback (most recent call last):
   File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Project-Mysql-library\DHP\users\adminlogin.py", line 29, in admin_login
     color(f"Super User {id1} has Logged In! Power: {power}")
 NameError: name 'color' is not defined
-2022-02-15 22:09:36,171 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
-2022-02-15 22:09:36,174 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
-2022-02-15 22:09:36,174 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
-2022-02-15 22:09:40,761 : DHP.Utils.logger : INFO : User 5940 has Logged In!
-2022-02-15 22:11:32,627 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
-2022-02-15 22:11:32,630 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
-2022-02-15 22:11:32,630 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
-2022-02-15 22:11:49,258 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
-2022-02-15 22:11:49,264 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
-2022-02-15 22:11:49,264 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
-2022-02-15 22:12:00,040 : DHP.Utils.logger : INFO : User 5940 has Logged In!
-2022-02-15 22:12:23,703 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
-2022-02-15 22:12:23,713 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
-2022-02-15 22:12:23,713 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
-2022-02-15 22:12:28,975 : DHP.Utils.logger : INFO : User 5940 has Logged In!
-2022-02-15 22:12:42,263 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
-2022-02-15 22:12:42,268 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
-2022-02-15 22:12:42,268 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
-2022-02-15 22:12:57,376 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
-2022-02-15 22:12:57,380 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
-2022-02-15 22:12:57,380 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
-2022-02-15 22:13:03,232 : DHP.Utils.logger : INFO : Super User 5940 has Logged In! Power: 3
-2022-02-15 22:17:28,809 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
-2022-02-15 22:17:28,809 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
-2022-02-15 22:24:10,197 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
-2022-02-15 22:24:10,218 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
-2022-02-15 22:24:10,218 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
-2022-02-15 22:24:22,556 : DHP.Utils.logger : INFO : User 5940 has Logged In!
-2022-02-15 22:26:25,903 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
-2022-02-15 22:26:25,905 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
-2022-02-15 22:26:25,905 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
-2022-02-19 16:12:12,999 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
-2022-02-19 16:12:13,153 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
-2022-02-19 16:12:13,153 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
-2022-02-19 16:13:22,424 : DHP.Utils.logger : INFO : User 1111 has Logged In!
+2022-02-19 16:47:11,685 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-19 16:47:11,711 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-19 16:47:11,711 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-19 16:47:23,629 : DHP.Utils.logger : ERROR : name 'name' is not defined
+Traceback (most recent call last):
+  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Project-Mysql-library\DHP\sudo\admin.py", line 33, in add_admin
+    q2_value = (id1, name, passwd)
+NameError: name 'name' is not defined
+2022-02-19 16:47:50,873 : DHP.Utils.logger : WARNING : remove Admin - Loop closed due to Keyboard interrupt Error
+2022-02-19 16:49:08,524 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-19 16:49:08,527 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-19 16:49:08,527 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-19 16:49:24,441 : DHP.Utils.logger : ERROR : name 'color' is not defined
+Traceback (most recent call last):
+  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Project-Mysql-library\DHP\sudo\admin.py", line 36, in add_admin
+    print(color("New User Has Been Created Successfully !!"))
+NameError: name 'color' is not defined
+2022-02-19 16:49:48,371 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-19 16:49:48,375 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-19 16:49:48,375 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+----
+2022-02-19 16:54:32,698 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-19 16:54:32,704 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-19 16:54:32,704 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-19 16:54:42,362 : DHP.Utils.logger : WARNING : New Admin Added 1111 | By 5940
+2022-02-19 16:54:45,029 : DHP.Utils.logger : WARNING : New Admin Added 1111 | By 5940

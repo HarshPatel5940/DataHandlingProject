@@ -10,7 +10,7 @@ def sign_up():
             pwd = True
             empty = []
 
-            id1 = input("PLEASE ENTER A 4 DIGIT ID!!! (No Less No More)")
+            id1 = input("PLEASE ENTER A 4 DIGIT ID!!! (No Less No More): ")
 
             if len(id1) != 4:
                 warn("PLEASE ENTER A 4 DIGIT ID!!! (No Less No More)")
@@ -64,6 +64,7 @@ Note:
                 cursor.execute(q2_insert, q2_value)
                 connection.commit()
                 print(color("New User Has Been Created Successfully !!"))
+                logger.warning(f"New User {id1} Has Been Created!!")
 
                 if pwd is False:
                     warn(

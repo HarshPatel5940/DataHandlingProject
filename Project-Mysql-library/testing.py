@@ -3,11 +3,7 @@ from DBScript import SetupUser
 SetupUser()
 
 
-from DHP.users.register import sign_up
+from DHP.sudo.admin import add_admin, remove_admin
 
-sign_up()
-
-from DHP.users.login import login
-login()
-
-
+add_admin("5940")
+remove_admin("5940")
