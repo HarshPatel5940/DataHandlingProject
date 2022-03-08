@@ -1,7 +1,5 @@
-import csv
-from os import listdir as ls
-
-from DHP.paths import *
+from DHP.Utils.cursor import cursor, connection
+from DHP.context import color, warn
 from DHP.Utils.logger import logger
 
 try:
@@ -13,13 +11,14 @@ except Exception as e:
 
 
 def show_all_users():
-    with open(user_file_path, "r") as f:
-        reader = csv.reader(f)
-        print(
-            Df(
-                reader,
-            )
-        )
+    q1 = "SELECT user_id, user_name from UserData;"
+    cursor.execute(q1)
+    f1 = cursor.fetchall()
+
+    print("")
+    for i in f1:
+        for j in i:
+            print("")
 
 
 def show_all_admins():

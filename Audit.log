@@ -92,3 +92,8 @@ NameError: name 'color' is not defined
 2022-02-19 16:54:32,704 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
 2022-02-19 16:54:42,362 : DHP.Utils.logger : WARNING : New Admin Added 1111 | By 5940
 2022-02-19 16:54:45,029 : DHP.Utils.logger : WARNING : New Admin Added 1111 | By 5940
+2022-02-20 17:29:35,740 : Utility : DEBUG : Connected To DataBase | sys
+2022-02-20 17:29:35,787 : Utility : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-20 17:29:35,788 : Utility : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-20 17:29:37,111 : Utility : WARNING : Add Admin - Loop closed due to Keyboard interrupt Error
+2022-02-20 17:29:39,080 : Utility : WARNING : remove Admin - Loop closed due to Keyboard interrupt Error

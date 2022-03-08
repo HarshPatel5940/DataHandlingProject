@@ -59,7 +59,7 @@ def AdminLoop(id1):
         else:
             invalid_option()
             pass
-
+            
 
 def OwnerLoop(id1):
     while True:
