@@ -1,0 +1,48 @@
+2022-03-09 16:39:30,798 : DHP.Utils.logger : INFO : Project has Been Started
+2022-03-09 16:39:46,471 : DHP.Utils.logger : ERROR : [Errno 2] No such file or directory: 'data_user.csv'
+Traceback (most recent call last):
+  File "D:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Previous Versions\ProjectWithLibrary\MainLoop.py", line 31, in LibProject
+    sign_up()
+  File "D:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Previous Versions\ProjectWithLibrary\DHP\users\register.py", line 17, in sign_up
+    with open(user_file_path, 'r') as file1:
+FileNotFoundError: [Errno 2] No such file or directory: 'data_user.csv'
+2022-03-09 16:40:33,419 : DHP.Utils.logger : INFO : Project has Been Started
+2022-03-09 16:41:51,689 : DHP.Utils.logger : INFO : Project has Been Started
+2022-03-09 16:43:01,464 : DHP.Utils.logger : WARNING : Loop closed due to Keyboard interrupt Error
+2022-03-09 16:44:32,086 : DHP.Utils.logger : INFO : Project has Been Started
+2022-03-09 16:46:06,368 : DHP.Utils.logger : INFO : Project has Been Started
+2022-03-09 16:47:59,585 : DHP.Utils.logger : INFO : User 4567 has logged in
+2022-03-09 16:48:48,959 : DHP.Utils.logger : ERROR : [WinError 3] The system cannot find the path specified: 'data/'
+Traceback (most recent call last):
+  File "D:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Previous Versions\ProjectWithLibrary\MainLoop.py", line 20, in LibProject
+    UserLoop(id1)
+  File "D:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Previous Versions\ProjectWithLibrary\DHP\helperloops.py", line 23, in UserLoop
+    app_data_create(id1, app)
+  File "D:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Previous Versions\ProjectWithLibrary\DHP\app\create.py", line 9, in app_data_create
+    file_list = ls(app_data_path)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'data/'
+2022-03-09 16:50:09,599 : DHP.Utils.logger : INFO : Project has Been Started
+2022-03-09 16:50:16,890 : DHP.Utils.logger : INFO : User 4567 has logged in
+2022-03-09 16:50:36,813 : DHP.Utils.logger : INFO : User 4567 Created App tracking for SindhiModelSchool
+2022-03-09 16:51:28,307 : DHP.Utils.logger : INFO : User 4567 Added Data for SindhiMoedlSchool with Week-No 1
+2022-03-09 16:57:19,381 : DHP.Utils.logger : INFO : User 4567 Added Data for SidhiModelSchool with Week-No 1
+2022-03-09 16:59:02,404 : DHP.Utils.logger : INFO : User 4567 Created App tracking for 
+2022-03-09 17:33:40,787 : DHP.Utils.logger : INFO : User 4567 Logged out.
+2022-03-09 18:41:30,255 : DHP.Utils.logger : INFO : Project has Been Started
+2022-03-09 18:43:26,408 : DHP.Utils.logger : INFO : User 4567 has logged in
+2022-03-09 18:44:20,352 : DHP.Utils.logger : WARNING : User 4567 Has Changed password. [from: DUTpwd to: DUTnewpassword]
+2022-03-09 18:45:17,528 : DHP.Utils.logger : INFO : User 4567 Logged out.
+2022-03-09 18:45:48,603 : DHP.Utils.logger : INFO : Super User 4567 has logged in
+2022-03-09 18:53:20,922 : DHP.Utils.logger : ERROR : name 'id2' is not defined
+Traceback (most recent call last):
+  File "D:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Previous Versions\ProjectWithLibrary\MainLoop.py", line 27, in LibProject
+    AdminLoop(id2)
+  File "D:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Previous Versions\ProjectWithLibrary\DHP\helperloops.py", line 57, in AdminLoop
+    log_out(id2)
+NameError: name 'id2' is not defined
+2022-03-09 18:56:42,893 : DHP.Utils.logger : INFO : Project has Been Started
+2022-03-09 19:00:18,764 : DHP.Utils.logger : INFO : Super User 5940 has logged in
+2022-03-09 19:01:50,372 : DHP.Utils.logger : WARNING : 5940 Added New Admin - ID 3333
+2022-03-09 19:01:57,162 : DHP.Utils.logger : WARNING : 5940 Removed Admin with ID - 3333
+2022-03-09 19:02:52,744 : DHP.Utils.logger : WARNING : 5940 Added New Admin - ID 3333
+2022-03-09 19:02:56,572 : DHP.Utils.logger : WARNING : 5940 Removed Admin with ID - 3333

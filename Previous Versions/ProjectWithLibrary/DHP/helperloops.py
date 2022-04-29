@@ -46,7 +46,7 @@ def AdminLoop(id1):
             show_user_count()
             show_all_users()
         elif ask1 == "2":
-            password_update_by_admin(id2)
+            password_update_by_admin(id1)
         elif ask1 == "3":
             try:
                 id1 = int(input("Enter the user ID for which you want to show apps : "))
@@ -54,7 +54,7 @@ def AdminLoop(id1):
             except ValueError:
                 print("Invalid id!!")
         elif ask1 == "4":
-            log_out(id2)
+            log_out(id1)
             break
         else:
             invalid_option()

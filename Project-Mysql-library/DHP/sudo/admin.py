@@ -12,8 +12,12 @@ def add_admin(id2):
             id1 = input("PLEASE ENTER A 4 DIGIT ID!!! (No Less No More): ")
 
             if len(id1) != 4:
-                warn("PLEASE ENTER A 4 DIGIT ID!!! (No Less No More)")
-                pass
+                warn("PLEASE ENTER A 4 DIGIT ID!!! ")
+                return
+            
+            if id1.isdigit() is False:
+                warn("PLEASE ENTER A 4 DIGIT INTEGER ID!!! ")
+                return
 
             Q1_userid = "SELECT user_id from UserData WHERE user_id=%s"
             cursor.execute(Q1_userid, (id1,))

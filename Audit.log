@@ -97,3 +97,38 @@ NameError: name 'color' is not defined
 2022-02-20 17:29:35,788 : Utility : INFO : DB Changed | sys => schoolmysqlproject
 2022-02-20 17:29:37,111 : Utility : WARNING : Add Admin - Loop closed due to Keyboard interrupt Error
 2022-02-20 17:29:39,080 : Utility : WARNING : remove Admin - Loop closed due to Keyboard interrupt Error
+2022-04-29 09:45:48,786 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-04-29 09:45:48,870 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-04-29 09:45:48,870 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-04-29 09:46:15,033 : DHP.Utils.logger : WARNING : New Admin Added 6 | By 5940
+2022-04-29 09:46:17,328 : DHP.Utils.logger : WARNING : New Admin Added 6 | By 5940
+2022-04-29 09:55:49,097 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-04-29 09:55:49,100 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-04-29 09:55:49,100 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-04-29 09:55:49,111 : DHP.Utils.logger : ERROR : name 'nput' is not defined
+Traceback (most recent call last):
+  File "D:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Project-Mysql-library\DHP\sudo\admin.py", line 12, in add_admin
+    id1 = nput("PLEASE ENTER A 4 DIGIT ID!!! (No Less No More): ")
+NameError: name 'nput' is not defined
+2022-04-29 09:56:08,633 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-04-29 09:56:08,638 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-04-29 09:56:08,638 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-04-29 09:49:54,030 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-04-29 09:49:54,034 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-04-29 09:49:54,034 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-04-29 09:50:01,412 : DHP.Utils.logger : ERROR : 1366 (HY000): Incorrect integer value: 'a' for column 'user_id' at row 1
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\mysql\connector\connection_cext.py", line 535, in cmd_query
+    self._cmysql.query(query,
+_mysql_connector.MySQLInterfaceError: Incorrect integer value: 'a' for column 'user_id' at row 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Project-Mysql-library\DHP\sudo\admin.py", line 39, in add_admin
+    cursor.execute(q2_insert, q2_value)
+  File "C:\Python\lib\site-packages\mysql\connector\cursor_cext.py", line 269, in execute
+    result = self._cnx.cmd_query(stmt, raw=self._raw,
+  File "C:\Python\lib\site-packages\mysql\connector\connection_cext.py", line 540, in cmd_query
+    raise errors.get_mysql_exception(exc.errno, msg=exc.msg,
+mysql.connector.errors.DatabaseError: 1366 (HY000): Incorrect integer value: 'a' for column 'user_id' at row 1
