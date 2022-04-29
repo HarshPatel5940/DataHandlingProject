@@ -1,110 +1,134 @@
-2021-11-09 15:57:58,656 : modules : INFO : Project has Been Started (Loop.py line 8)
-2021-11-09 15:58:07,189 : modules : INFO : User 5940 has logged in
-2021-11-09 15:58:54,695 : modules : INFO : User 5940 Added Data for discord with Week-No 2
-2021-11-09 15:58:58,207 : modules : INFO : User 5940 Logged out.
-2021-11-09 16:00:31,987 : modules : INFO : Project has Been Started (Loop.py line 8)
-2021-11-09 16:00:31,987 : modules : ERROR : name 'true' is not defined
+2022-02-15 18:36:16,805 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-15 18:36:16,836 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-15 18:36:16,836 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-15 18:36:16,836 : DHP.Utils.logger : DEBUG : Entering sign_up module
+2022-02-15 18:36:28,169 : DHP.Utils.logger : ERROR : name 'q2_insert' is not defined
 Traceback (most recent call last):
-  File "D:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Loop.py", line 11, in Project
-    while true:
-NameError: name 'true' is not defined
-2021-11-09 16:07:16,772 : modules : INFO : Project has Been Started (Loop.py line 8)
-2021-11-09 16:07:34,928 : modules : INFO : Super User 5940 has logged in
-2021-11-09 16:08:15,218 : modules : WARNING : 5940 Removed Admin with ID 4567
-2021-11-09 16:08:48,837 : modules : WARNING : 5940 Added New Admin with ID 4567
-2021-11-09 16:09:40,896 : modules : INFO : User 5940 Logged out.
-2021-11-09 16:12:12,179 : modules : INFO : Project has Been Started (Loop.py line 8)
-2021-11-09 16:12:52,342 : modules : INFO : User Logged out.
-2021-11-09 16:13:06,692 : modules : INFO : Project has Been Started (Loop.py line 8)
-2021-11-09 16:13:33,717 : modules : INFO : Loop closed due to Keyboard Interrupt
-2021-11-09 16:33:28,935 : config : ERROR : No module named 'termcolor'
+  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Project-Mysql-library\DHP\users\register.py", line 47, in sign_up
+    q2_insert
+NameError: name 'q2_insert' is not defined
+2022-02-15 18:38:30,793 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-15 18:38:30,816 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-15 18:38:30,816 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-15 18:38:30,816 : DHP.Utils.logger : DEBUG : Entering sign_up module
+2022-02-15 18:38:34,320 : DHP.Utils.logger : ERROR : name 'WARN' is not defined
 Traceback (most recent call last):
-  File "D:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\modules.py", line 6, in <module>
-    from termcolor import colored, cprint  # pip install termcolor
-ModuleNotFoundError: No module named 'termcolor'
+  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Project-Mysql-library\DHP\users\register.py", line 17, in sign_up
+    WARN("PLEASE ENTER ONLY 4 DIGIT ID!!! (No Less No More)")
+NameError: name 'WARN' is not defined
+2022-02-15 18:38:51,550 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-15 18:38:51,565 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-15 18:38:51,565 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-15 18:38:51,565 : DHP.Utils.logger : DEBUG : Entering sign_up module
+2022-02-15 18:38:59,283 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-15 18:38:59,288 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-15 18:38:59,288 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-15 18:38:59,288 : DHP.Utils.logger : DEBUG : Entering sign_up module
+2022-02-15 21:30:53,156 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-15 21:30:53,281 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-15 21:30:53,281 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-15 21:31:09,502 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-15 21:31:09,507 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-15 21:31:09,507 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-15 21:49:04,137 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-15 21:49:04,145 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-15 21:49:04,145 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-15 21:49:15,332 : DHP.Utils.logger : INFO : Super User 5940 has Logged In! Power: 3
+2022-02-15 21:56:51,674 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-15 21:56:51,694 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-15 21:56:51,694 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-15 21:57:01,591 : DHP.Utils.logger : INFO : Super User 5940 has Logged In! Power: 3
+2022-02-15 21:57:01,623 : DHP.Utils.logger : ERROR : name 'color' is not defined
+Traceback (most recent call last):
+  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Project-Mysql-library\DHP\users\adminlogin.py", line 32, in admin_login
+    color(f"Super User {id1} has Logged In! Power: {power}")
+NameError: name 'color' is not defined
+2022-02-15 21:59:08,285 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-15 21:59:08,299 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-15 21:59:08,300 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-15 21:59:13,189 : DHP.Utils.logger : ERROR : list index out of range
+Traceback (most recent call last):
+  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Project-Mysql-library\DHP\users\adminlogin.py", line 21, in admin_login
+    power = power[3]
+IndexError: list index out of range
+2022-02-15 22:01:05,047 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-15 22:01:05,059 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-15 22:01:05,059 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-15 22:02:45,343 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-15 22:02:45,353 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-15 22:02:45,353 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-15 22:07:57,518 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-15 22:07:57,529 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-15 22:07:57,530 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-15 22:08:03,548 : DHP.Utils.logger : INFO : Super User 5940 has Logged In! Power: 3
+2022-02-15 22:08:03,574 : DHP.Utils.logger : ERROR : name 'color' is not defined
+Traceback (most recent call last):
+  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Project-Mysql-library\DHP\users\adminlogin.py", line 29, in admin_login
+    color(f"Super User {id1} has Logged In! Power: {power}")
+NameError: name 'color' is not defined
+2022-02-19 16:47:11,685 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-19 16:47:11,711 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-19 16:47:11,711 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-19 16:47:23,629 : DHP.Utils.logger : ERROR : name 'name' is not defined
+Traceback (most recent call last):
+  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Project-Mysql-library\DHP\sudo\admin.py", line 33, in add_admin
+    q2_value = (id1, name, passwd)
+NameError: name 'name' is not defined
+2022-02-19 16:47:50,873 : DHP.Utils.logger : WARNING : remove Admin - Loop closed due to Keyboard interrupt Error
+2022-02-19 16:49:08,524 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-19 16:49:08,527 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-19 16:49:08,527 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-19 16:49:24,441 : DHP.Utils.logger : ERROR : name 'color' is not defined
+Traceback (most recent call last):
+  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Project-Mysql-library\DHP\sudo\admin.py", line 36, in add_admin
+    print(color("New User Has Been Created Successfully !!"))
+NameError: name 'color' is not defined
+2022-02-19 16:49:48,371 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-19 16:49:48,375 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-19 16:49:48,375 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+----
+2022-02-19 16:54:32,698 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-02-19 16:54:32,704 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-19 16:54:32,704 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-19 16:54:42,362 : DHP.Utils.logger : WARNING : New Admin Added 1111 | By 5940
+2022-02-19 16:54:45,029 : DHP.Utils.logger : WARNING : New Admin Added 1111 | By 5940
+2022-02-20 17:29:35,740 : Utility : DEBUG : Connected To DataBase | sys
+2022-02-20 17:29:35,787 : Utility : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-02-20 17:29:35,788 : Utility : INFO : DB Changed | sys => schoolmysqlproject
+2022-02-20 17:29:37,111 : Utility : WARNING : Add Admin - Loop closed due to Keyboard interrupt Error
+2022-02-20 17:29:39,080 : Utility : WARNING : remove Admin - Loop closed due to Keyboard interrupt Error
+2022-04-29 09:45:48,786 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-04-29 09:45:48,870 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-04-29 09:45:48,870 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-04-29 09:46:15,033 : DHP.Utils.logger : WARNING : New Admin Added 6 | By 5940
+2022-04-29 09:46:17,328 : DHP.Utils.logger : WARNING : New Admin Added 6 | By 5940
+2022-04-29 09:55:49,097 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-04-29 09:55:49,100 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-04-29 09:55:49,100 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-04-29 09:55:49,111 : DHP.Utils.logger : ERROR : name 'nput' is not defined
+Traceback (most recent call last):
+  File "D:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Project-Mysql-library\DHP\sudo\admin.py", line 12, in add_admin
+    id1 = nput("PLEASE ENTER A 4 DIGIT ID!!! (No Less No More): ")
+NameError: name 'nput' is not defined
+2022-04-29 09:56:08,633 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-04-29 09:56:08,638 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-04-29 09:56:08,638 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-04-29 09:49:54,030 : DHP.Utils.logger : DEBUG : Connected To DataBase | sys
+2022-04-29 09:49:54,034 : DHP.Utils.logger : DEBUG : INITIALIZATION OF DATABASE COMPLETE
+2022-04-29 09:49:54,034 : DHP.Utils.logger : INFO : DB Changed | sys => schoolmysqlproject
+2022-04-29 09:50:01,412 : DHP.Utils.logger : ERROR : 1366 (HY000): Incorrect integer value: 'a' for column 'user_id' at row 1
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\mysql\connector\connection_cext.py", line 535, in cmd_query
+    self._cmysql.query(query,
+_mysql_connector.MySQLInterfaceError: Incorrect integer value: 'a' for column 'user_id' at row 1
 
-========================= ABOVE PART IS AN EXAMPLE OF LOGGING FOR GITHUB =========================
+During handling of the above exception, another exception occurred:
 
-2021-12-14 18:17:08,289 : DHP.Utils.logger : INFO : Project has Been Started
-2021-12-14 18:17:18,009 : DHP.Utils.logger : ERROR : name 'login' is not defined
 Traceback (most recent call last):
-  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Beta-Library\MainLoop.py", line 16, in LibProject
-    id1 = login()
-NameError: name 'login' is not defined
-2021-12-14 18:20:28,722 : DHP.Utils.logger : INFO : Project has Been Started
-2021-12-14 18:21:20,049 : DHP.Utils.logger : INFO : User 5940 has logged in
-2021-12-14 18:24:12,844 : DHP.Utils.logger : ERROR : name 'ls' is not defined
-Traceback (most recent call last):
-  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Beta-Library\MainLoop.py", line 20, in LibProject
-    UserLoop(id1)
-  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Beta-Library\DHP\helperloops.py", line 19, in UserLoop
-    show_apps_count(id1)
-  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Beta-Library\DHP\Utils\show.py", line 34, in show_apps_count
-    def show_user_count():
-NameError: name 'ls' is not defined
-2021-12-14 18:27:35,289 : DHP.Utils.logger : INFO : Project has Been Started
-2021-12-14 18:27:44,957 : DHP.Utils.logger : INFO : User 5940 has logged in
-2021-12-14 18:29:13,269 : DHP.Utils.logger : INFO : Project has Been Started
-2021-12-14 18:29:22,167 : DHP.Utils.logger : INFO : User 5940 has logged in
-2021-12-14 18:29:36,409 : DHP.Utils.logger : INFO : Project has Been Started
-2021-12-14 18:29:52,640 : DHP.Utils.logger : INFO : User 5940 has logged in
-2021-12-14 18:31:30,778 : DHP.Utils.logger : INFO : User 5940 Added Data for discord with Week-No 3
-2021-12-14 18:33:34,931 : DHP.Utils.logger : ERROR : name 'ls' is not defined
-Traceback (most recent call last):
-  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Beta-Library\MainLoop.py", line 20, in LibProject
-    UserLoop(id1)
-  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Beta-Library\DHP\helperloops.py", line 22, in UserLoop
-    app_data_create(id1, app)
-  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Beta-Library\DHP\app\create.py", line 9, in app_data_create
-    file_list = ls(app_data_path)
-NameError: name 'ls' is not defined
-2021-12-14 18:33:48,108 : DHP.Utils.logger : INFO : Project has Been Started
-2021-12-14 18:33:53,302 : DHP.Utils.logger : INFO : User 5940 has logged in
-2021-12-14 18:34:02,694 : DHP.Utils.logger : INFO : User 5940 Created App tracking for LearningLibrary
-2021-12-14 18:34:20,706 : DHP.Utils.logger : INFO : User 5940 Added Data for LearningLibrary with Week-No 1
-2021-12-14 18:36:58,137 : DHP.Utils.logger : INFO : Project has Been Started
-2021-12-14 18:37:11,652 : DHP.Utils.logger : INFO : User 5940 has logged in
-2021-12-14 18:38:53,214 : DHP.Utils.logger : ERROR : I/O operation on closed file.
-Traceback (most recent call last):
-  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Beta-Library\MainLoop.py", line 20, in LibProject
-    UserLoop(id1)
-  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Beta-Library\DHP\helperloops.py", line 30, in UserLoop
-    password_update_by_user(id1)
-  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Beta-Library\DHP\sudo\pwd.py", line 61, in password_update_by_user
-    with open(user_file_path, "r") as f:
-ValueError: I/O operation on closed file.
-2021-12-14 18:41:16,854 : DHP.Utils.logger : INFO : Project has Been Started
-2021-12-14 18:41:21,343 : DHP.Utils.logger : INFO : User 5940 has logged in
-2021-12-14 18:41:35,810 : DHP.Utils.logger : WARNING : User 5940 Has Changed password. [from: harshop to: iamgoodboiof18]
-2021-12-14 18:41:41,066 : DHP.Utils.logger : INFO : User 5940 Logged out.
-2021-12-14 18:43:05,816 : DHP.Utils.logger : ERROR : 'NoneType' object is not subscriptable
-Traceback (most recent call last):
-  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Beta-Library\MainLoop.py", line 23, in LibProject
-    id2 = tup[0]
-TypeError: 'NoneType' object is not subscriptable
-2021-12-14 18:44:39,311 : DHP.Utils.logger : INFO : Project has Been Started
-2021-12-14 18:45:40,522 : DHP.Utils.logger : INFO : Project has Been Started
-2021-12-14 18:46:09,976 : DHP.Utils.logger : INFO : Super User 5940 has logged in
-2021-12-14 18:46:42,776 : DHP.Utils.logger : ERROR : local variable 'id1' referenced before assignment
-Traceback (most recent call last):
-  File "d:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Beta-Library\MainLoop.py", line 29, in LibProject
-    OwnerLoop(id2)
-UnboundLocalError: local variable 'id1' referenced before assignment
-2021-12-14 18:46:54,577 : DHP.Utils.logger : INFO : Project has Been Started
-2021-12-14 18:47:08,250 : DHP.Utils.logger : INFO : Super User 5940 has logged in
-2021-12-14 18:49:00,590 : DHP.Utils.logger : INFO : Project has Been Started
-2021-12-14 18:49:38,126 : DHP.Utils.logger : INFO : Super User 5940 has logged in
-2021-12-14 18:52:24,224 : DHP.Utils.logger : INFO : Project has Been Started
-2021-12-14 18:52:34,653 : DHP.Utils.logger : INFO : Super User 5940 has logged in
-2021-12-14 18:53:51,790 : DHP.Utils.logger : INFO : Project has Been Started
-2021-12-14 18:54:01,493 : DHP.Utils.logger : INFO : Super User 5940 has logged in
-2021-12-14 18:54:21,339 : DHP.Utils.logger : WARNING : 5940 Added New Admin - ID 7766
-2021-12-14 18:54:39,020 : DHP.Utils.logger : WARNING : 5940 Removed Admin with ID - 7755
-2021-12-14 18:54:46,739 : DHP.Utils.logger : WARNING : 5940 Removed Admin with ID - 7766
-2021-12-14 18:55:16,353 : DHP.Utils.logger : WARNING : 5940 Has Changed password of 5940 to harshop
-2021-12-14 18:55:51,957 : DHP.Utils.logger : INFO : Project has Been Started
-2021-12-14 18:56:06,612 : DHP.Utils.logger : INFO : User 5940 has logged in
-2021-12-14 18:56:08,623 : DHP.Utils.logger : INFO : User 5940 Logged out.
-2021-12-14 18:57:18,940 : DHP.Utils.logger : INFO : Project has Been Started
-2021-12-14 18:58:12,837 : DHP.Utils.logger : INFO : Project has Been Started
-2021-12-14 18:59:43,736 : DHP.Utils.logger : INFO : Project has Been Started
+  File "D:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Project-Mysql-library\DHP\sudo\admin.py", line 39, in add_admin
+    cursor.execute(q2_insert, q2_value)
+  File "C:\Python\lib\site-packages\mysql\connector\cursor_cext.py", line 269, in execute
+    result = self._cnx.cmd_query(stmt, raw=self._raw,
+  File "C:\Python\lib\site-packages\mysql\connector\connection_cext.py", line 540, in cmd_query
+    raise errors.get_mysql_exception(exc.errno, msg=exc.msg,
+mysql.connector.errors.DatabaseError: 1366 (HY000): Incorrect integer value: 'a' for column 'user_id' at row 1

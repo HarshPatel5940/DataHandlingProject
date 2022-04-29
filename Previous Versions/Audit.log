@@ -1,0 +1,26 @@
+2021-11-09 15:57:58,656 : modules : INFO : Project has Been Started (Loop.py line 8)
+2021-11-09 15:58:07,189 : modules : INFO : User 5940 has logged in
+2021-11-09 15:58:54,695 : modules : INFO : User 5940 Added Data for discord with Week-No 2
+2021-11-09 15:58:58,207 : modules : INFO : User 5940 Logged out.
+2021-11-09 16:00:31,987 : modules : INFO : Project has Been Started (Loop.py line 8)
+2021-11-09 16:00:31,987 : modules : ERROR : name 'true' is not defined
+Traceback (most recent call last):
+  File "D:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\Loop.py", line 11, in Project
+    while true:
+NameError: name 'true' is not defined
+2021-11-09 16:07:16,772 : modules : INFO : Project has Been Started (Loop.py line 8)
+2021-11-09 16:07:34,928 : modules : INFO : Super User 5940 has logged in
+2021-11-09 16:08:15,218 : modules : WARNING : 5940 Removed Admin with ID 4567
+2021-11-09 16:08:48,837 : modules : WARNING : 5940 Added New Admin with ID 4567
+2021-11-09 16:09:40,896 : modules : INFO : User 5940 Logged out.
+2021-11-09 16:12:12,179 : modules : INFO : Project has Been Started (Loop.py line 8)
+2021-11-09 16:12:52,342 : modules : INFO : User Logged out.
+2021-11-09 16:13:06,692 : modules : INFO : Project has Been Started (Loop.py line 8)
+2021-11-09 16:13:33,717 : modules : INFO : Loop closed due to Keyboard Interrupt
+2021-11-09 16:33:28,935 : config : ERROR : No module named 'termcolor'
+Traceback (most recent call last):
+  File "D:\Sindhi Model School (SMS)\HARSH\PROGRAMS\DataHandlingProject\modules.py", line 6, in <module>
+    from termcolor import colored, cprint  # pip install termcolor
+ModuleNotFoundError: No module named 'termcolor'
+
+========================= ABOVE PART IS AN EXAMPLE OF LOGGING FOR GITHUB =========================
