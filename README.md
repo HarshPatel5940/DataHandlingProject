@@ -13,8 +13,4 @@
 pip install mysql-connector-python termcolor pandas
 ```
    
-
-## Project Explanation: (PENDING... Create PR if you want to help)
-
-
-### Need to contact or share something? Feel Free to open a [Discussion](https://github.com/HarshPatel5940/DataHandlingProject/discussions) under suitable topic
+## Project is Now Archived. (Read Only)
